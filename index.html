@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Omolola Odunowo">
+    <meta name="theme-color" content="#690d47">
+    <meta name="description" content="A simple and responsive weather app">
+    <title>Easy check Weather App</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+   <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="row">
+    <div class="col-">
+        <span id="enterloc"> Kindly Input Your Location Below </span>
+        <input type="text" placeholder="Continent/Country" class="inputval" id="inputvalue">
+        <button class="btn" id="bttn">Click Here</button>
+        <h5 id="err"></h5>
+    </div>
+    </div>
+    <div class="row -sx">
+    <div class="col- web_interface col-sm"> 
+        <h2> The Weather Beast </h2>
+        <div class="col- img-cl">
+      
+        </div>
+        <p class="notification"></p>
+        <h1 class="degree"> - </h1>
+        <h3 class="desc"> - </h3>
+        <h4 class="location"> - </h4>
+
+    </div>
+    </div>
+    
+    <script>
+         //setting service worker
+         if("serviceWorker" in navigator){
+        window.addEventListener("load", function(){
+        navigator.serviceWorker.register("service_worker.js")
+    .then(function(reg){
+        if(reg.installing){
+        console.log("SW Installing");
+    }else if (reg.waiting){
+        console.log("SW waiting");
+    }else if(reg.active){
+        console.log("SW Activated");
+    }
+    }).catch(function(error){
+        //This shows if the registration failed from promise
+        console.log("Registration failed with " + error);
+    });
+ })
+}
+
+
+    </script>
+    <script src="main.js"> </script>
+    
+</body>
+</html>

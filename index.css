@@ -1,0 +1,206 @@
+*{
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background-image:url("images/rockymountains.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:100%;
+}
+
+div{
+    border:0px solid black;
+}
+
+.row::after{
+    content:" ";
+    clear:both;
+    display:table;
+}
+
+[class*="col-"]{
+        float:left;
+        padding:15px;
+        width:100%;
+}
+
+#enterloc{
+    display:block;
+    text-align:center;
+    color:#690d47;
+    font-size:1em;
+}
+
+input{
+    padding:6px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 6px;
+    border:3px solid #690d47;
+    margin-left:60px;
+    margin-top:6px;
+}
+
+button{
+    padding:6px;
+    display:block;
+    background-color:#690d47;
+    color:white;
+    margin-top:20px;
+    margin-left:100px;
+    border:1px solid #690d47;
+    border-radius:3px;
+
+}
+
+h5{
+    text-align:center;
+    color:white;
+    font-weight:lighter;
+    font-size:1em;
+    padding:0;
+}
+
+
+.web_interface{
+    background-color:rgba(171,176,243, 0.4);
+    min-height:400px;
+}
+
+.-sx{
+    margin-top:10px;
+}
+
+h2{
+    text-align:center;
+    font-family:Cooper Black;
+    font-size:2em;
+    color:#690d47;
+    
+}
+
+.-sm{
+
+    margin:0px;
+
+}
+
+h1{
+    text-align:center;
+    line-height:80px;
+
+}
+
+h3, h4{
+    text-align:center;
+    font-weight:lighter;
+}
+
+img{
+    width:30%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.notification{
+    display:none;
+    text-align:center;
+    font-size:1em;
+    color:#690d47;
+    padding:10px;
+    background-color:white;
+    font-weight:bolder;
+}
+
+@media only screen and (min-width:280px) and (max-width:319px){
+    input{
+        margin-left:40px;
+    }
+
+    #enterloc{
+        font-weight:bolder;
+    }
+}
+
+@media only screen and (min-width:321px) and (max-width:374px){
+    input{
+        margin-left:80px;
+    }
+
+    button{
+        margin-left:120px;
+    }
+
+}
+
+@media only screen and (min-width:375px) and (max-width:424px){
+    input{
+        margin-left:95px;
+    }
+
+    #enterloc{
+        font-weight:bolder;
+        font-size:1.25em;
+    }
+
+    button{
+        margin-left:135px;
+    }
+}
+
+@media only screen and (min-width:425px) and (max-width:767px){
+    input{
+         margin-left:125px;
+    }
+
+
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+    input{
+        margin-left:270px;
+    }
+
+    .col-sm{
+        float:left;
+        padding:15px;
+        width:50%;
+        margin-left:180px;
+    }
+
+    #enterloc{
+        font-size:1.45em;
+        font-weight:bolder;
+    }
+
+    button{
+        margin-left:320px;
+    }
+}
+
+@media only screen and (min-width:1024px) and (max-width:1440px){
+    input{
+        margin-left:400px;
+    }
+
+    .col-sm{
+        float:left;
+        padding:15px;
+        width:70%;
+        margin-left:150px;
+    }
+
+    #enterloc{
+        font-size:1.65em;
+        font-weight:bolder;
+    }
+
+    button{
+        margin-left:450px;
+    }
+}
+
+
